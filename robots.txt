@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://krishattri.vercel.app/sitemap.xml
+Sitemap: https://krishweb.online/sitemap.xml
