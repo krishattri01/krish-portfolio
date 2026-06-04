@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Experience Contributing to GSSoC '26: Auditing AI Agent Parsers - Open Source retrospective by Krish Attri.">
+    <link rel="canonical" href="https://krishattri.vercel.app/blog-gssoc">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="GSSoC '26 Contribution Retrospective | Krish Attri">
+    <meta property="og:description" content="My Experience Contributing to GSSoC '26: Auditing AI Agent Parsers - Open Source retrospective by Krish Attri.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://krishattri.vercel.app/blog-gssoc">
+    
+    <title>GSSoC '26 Contribution Retrospective | Krish Attri</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2.6">
+    <style>
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 24px 80px 24px;
+        }
+        .blog-back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-family: var(--font-code);
+            font-size: 0.85rem;
+            margin-bottom: 40px;
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(0, 229, 255, 0.15);
+            padding: 8px 16px;
+        }
+        .blog-back-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--text-primary);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        .blog-header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+        }
+        .blog-tag {
+            display: inline-block;
+            font-family: var(--font-code);
+            font-size: 0.75rem;
+            color: var(--accent-green);
+            background: rgba(0, 255, 136, 0.05);
+            padding: 4px 10px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(0, 255, 136, 0.15);
+        }
+        .blog-title {
+            font-size: 2.25rem;
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+        .blog-meta {
+            font-family: var(--font-code);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .blog-content {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+        .blog-content p {
+            margin-bottom: 24px;
+            max-width: 100%;
+        }
+        .blog-content h2 {
+            font-size: 1.5rem;
+            margin: 48px 0 20px 0;
+            color: var(--text-primary);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 8px;
+        }
+        .blog-content h3 {
+            font-size: 1.2rem;
+            margin: 32px 0 16px 0;
+            color: var(--text-primary);
+        }
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 24px;
+            padding-left: 24px;
+        }
+        .blog-content li {
+            margin-bottom: 8px;
+        }
+        .blog-code-block {
+            background-color: #050608;
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            font-family: var(--font-code);
+            font-size: 0.85rem;
+            line-height: 1.5;
+            overflow-x: auto;
+            margin: 30px 0;
+            color: #E2E8F0;
+        }
+        .blog-highlight {
+            color: var(--accent-cyan);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Grid Overlay -->
+    <div class="grid-overlay"></div>
+
+    <main class="blog-container">
+        <a href="index.html#blog" class="blog-back-btn">&larr; BACK TO PORTFOLIO</a>
+
+        <article>
+            <header class="blog-header">
+                <span class="blog-tag">OPEN SOURCE EXPERIENCE</span>
+                <h1 class="blog-title">My Experience Contributing to GSSoC '26: Auditing AI Agent Parsers</h1>
+                <div class="blog-meta">Posted on May 28, 2026 · Krish Attri · 5 min read</div>
+            </header>
+
+            <div class="blog-content">
+                <p>Open source software is the backbone of modern web engineering, and joining <span class="blog-highlight">GirlScript Summer of Code (GSSoC '26)</span> provided me with a unique opportunity to contribute directly to the next generation of developer ecosystems. Selecting the **AI/Agents and Open Source branch**, my primary objective was to audit parsing protocols and establish regression test layers for large language model (LLM) agents.</p>
+
+                <h2>The Challenge: Unstructured LLM Outputs</h2>
+                <p>In autonomous agent architectures, an agent interacts with external tools by generating structured text formats (usually JSON or markdown block configurations). However, LLMs are fundamentally probabilistic and occasionally drift, introducing formatting errors, half-truncated JSON boundaries, or unexpected system prefix prompts.</p>
+                <p>When these outputs hit standard parser code without strict validation layers, they cause runtime crashes or tool command leaks. My contribution target was to create validation middleware to catch these boundary anomalies early.</p>
+
+                <h2>Writing Regression Tests for Output Parsers</h2>
+                <p>I focused on creating edge-case test payloads simulating malformed LLM responses. For example, testing how the agent parser resolves extra leading bracket sequences or half-escaped control tags.</p>
+                <p>Here is an illustration of a mock test case validating how our middleware captures and cleans up malformed markdown block scopes:</p>
+
+                <pre class="blog-code-block"><code>import unittest
+import json
+import re
+
+def clean_and_parse_agent_response(raw_response: str) -> dict:
+    # Regex to capture content in markdown json brackets
+    json_match = re.search(r"```json\s*(.*?)\s*```", raw_response, re.DOTALL)
+    cleaned_string = json_match.group(1).strip() if json_match else raw_response.strip()
+    
+    # Handle common LLM truncation glitches: missing closing brace
+    if cleaned_string.startswith("{") and not cleaned_string.endswith("}"):
+        cleaned_string += "}"
+        
+    return json.loads(cleaned_string)
+
+class TestAgentParser(unittest.TestCase):
+    def test_truncated_json_recovery(self):
+        # Simulator of a common LLM streaming truncation error
+        malformed_input = '```json\n{\n  "action": "execute_shell",\n  "command": "whoami"'
+        expected_output = {"action": "execute_shell", "command": "whoami"}
+        
+        parsed = clean_and_parse_agent_response(malformed_input)
+        self.assertEqual(parsed, expected_output)
+        
+    def test_plain_text_fallback(self):
+        # Plain text without brackets
+        plain_input = '{\n  "action": "log_status",\n  "status": "active"\n}'
+        parsed = clean_and_parse_agent_response(plain_input)
+        self.assertEqual(parsed["action"], "log_status")
+
+if __name__ == "__main__":
+    unittest.main()
+</code></pre>
+
+                <h2>Filing Developer-Ready Bug Reports</h2>
+                <p>Beyond writing code, QA engineering requires clear documentation. During the timeline, I identified a critical logic flaw where raw terminal paths were exposed in error trace logs during failed sandbox execution calls.</p>
+                <p>By filing structured, developer-ready issue templates including reproducibility steps, execution environments, and proposed path-masking middleware, we successfully secured the tooling sandbox limits before release.</p>
+
+                <h2>Key Takeaways</h2>
+                <p>Contributing to GSSoC '26 taught me crucial lessons about open source workflows at scale:</p>
+                <ul>
+                    <li><strong>Rigorous Testing:</strong> Code works only when it is tested against adversarial outputs. Always assume external systems or user streams will deliver broken packets.</li>
+                    <li><strong>Collaborative Communication:</strong> High-quality issue templates and PR logs save developers hours of troubleshooting.</li>
+                    <li><strong>Git Hygiene:</strong> Keeping branch commits atomic and writing descriptive message headers is standard professional practice.</li>
+                </ul>
+                <p>You can view my verified contributions and tracker logs directly on my GSSoC '26 profile link.</p>
+            </div>
+        </article>
+    </main>
+
+</body>
+</html>

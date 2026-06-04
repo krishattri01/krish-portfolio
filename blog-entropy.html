@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Evaluating Password Strength Mathematically using Shannon Entropy - Security writeup by Krish Attri.">
+    <link rel="canonical" href="https://krishattri.vercel.app/blog-entropy">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Shannon Entropy Password Analysis | Krish Attri">
+    <meta property="og:description" content="Evaluating Password Strength Mathematically using Shannon Entropy - Security writeup by Krish Attri.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://krishattri.vercel.app/blog-entropy">
+    
+    <title>Shannon Entropy Password Analysis | Krish Attri</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2.6">
+    <style>
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 24px 80px 24px;
+        }
+        .blog-back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-family: var(--font-code);
+            font-size: 0.85rem;
+            margin-bottom: 40px;
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(0, 229, 255, 0.15);
+            padding: 8px 16px;
+        }
+        .blog-back-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--text-primary);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        .blog-header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+        }
+        .blog-tag {
+            display: inline-block;
+            font-family: var(--font-code);
+            font-size: 0.75rem;
+            color: var(--accent-cyan);
+            background: rgba(0, 229, 255, 0.05);
+            padding: 4px 10px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(0, 229, 255, 0.15);
+        }
+        .blog-title {
+            font-size: 2.25rem;
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+        .blog-meta {
+            font-family: var(--font-code);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .blog-content {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+        .blog-content p {
+            margin-bottom: 24px;
+            max-width: 100%;
+        }
+        .blog-content h2 {
+            font-size: 1.5rem;
+            margin: 48px 0 20px 0;
+            color: var(--text-primary);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 8px;
+        }
+        .blog-content h3 {
+            font-size: 1.2rem;
+            margin: 32px 0 16px 0;
+            color: var(--text-primary);
+        }
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 24px;
+            padding-left: 24px;
+        }
+        .blog-content li {
+            margin-bottom: 8px;
+        }
+        .blog-code-block {
+            background-color: #050608;
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            font-family: var(--font-code);
+            font-size: 0.85rem;
+            line-height: 1.5;
+            overflow-x: auto;
+            margin: 30px 0;
+            color: #E2E8F0;
+        }
+        .blog-highlight {
+            color: var(--accent-green);
+        }
+        .formula-card {
+            background: rgba(0, 255, 136, 0.02);
+            border: 1px dashed rgba(0, 255, 136, 0.2);
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+            font-family: var(--font-code);
+            color: var(--accent-green);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Grid Overlay -->
+    <div class="grid-overlay"></div>
+
+    <main class="blog-container">
+        <a href="index.html#blog" class="blog-back-btn">&larr; BACK TO PORTFOLIO</a>
+
+        <article>
+            <header class="blog-header">
+                <span class="blog-tag">SECURITY WRITEUP</span>
+                <h1 class="blog-title">Deep Dive into Shannon Entropy: Evaluating Password Strength Mathematically</h1>
+                <div class="blog-meta">Posted on June 4, 2026 · Krish Attri · 6 min read</div>
+            </header>
+
+            <div class="blog-content">
+                <p>When assessing user credentials during a security audit, traditional password checkers rely on arbitrary regex rules (e.g., "must contain 1 symbol, 1 uppercase letter"). While this enforces character diversity, it fails to measure actual information density or resistance to brute-force attacks. This is where <span class="blog-highlight">Shannon Entropy</span> becomes an invaluable metric.</p>
+
+                <h2>What is Shannon Entropy?</h2>
+                <p>Originating from Claude Shannon's 1948 paper on mathematical theories of communication, information entropy measures the uncertainty or unpredictability in a message. In the context of password analysis, it represents the minimum number of bits needed to represent the search space, assuming all characters in the defined pool are selected with equal probability.</p>
+
+                <div class="formula-card">
+                    H = L * log₂(R)
+                </div>
+                <p>Where:</p>
+                <ul>
+                    <li><strong>H</strong> = Entropy of the password (in bits).</li>
+                    <li><strong>L</strong> = Length of the password (number of characters).</li>
+                    <li><strong>R</strong> = Size of the character pool (charset range).</li>
+                </ul>
+
+                <h2>Defining the Character Pool (R)</h2>
+                <p>To accurately calculate entropy, we inspect the input string and identify active character sets:</p>
+                <ul>
+                    <li>Lowercase letters <code>[a-z]</code>: R = 26</li>
+                    <li>Uppercase letters <code>[A-Z]</code>: R = 52 (26 + 26)</li>
+                    <li>Numeric digits <code>[0-9]</code>: R = 62 (52 + 10)</li>
+                    <li>Common special symbols (e.g., <code>!@#$%^&*()</code>): R = 94 (62 + 32)</li>
+                </ul>
+
+                <h2>Python Implementation</h2>
+                <p>Below is a production-ready Python implementation evaluating password entropy dynamically and estimating cracking speeds against a high-performance offline brute-force rig running at 10 billion hashes/second (typical GPU rig constraints):</p>
+
+                <pre class="blog-code-block"><code>import math
+
+def calculate_entropy(password: str) -> float:
+    if not password:
+        return 0.0
+    
+    pool_size = 0
+    if any(c.islower() for c in password):
+        pool_size += 26
+    if any(c.isupper() for c in password):
+        pool_size += 26
+    if any(c.isdigit() for c in password):
+        pool_size += 10
+    if any(not c.isalnum() for c in password):
+        pool_size += 32
+        
+    if pool_size == 0:
+        return 0.0
+        
+    entropy = len(password) * math.log2(pool_size)
+    return round(entropy, 2)
+
+def estimate_crack_time(entropy: float) -> str:
+    # Search space size
+    combinations = 2 ** entropy
+    # Guess rate: 10 billion (10^10) guesses/sec
+    guess_rate = 1e10
+    seconds = combinations / (2 * guess_rate) # average time is half search space
+    
+    if seconds < 1:
+        return "Instantaneous"
+    elif seconds < 60:
+        return f"{round(seconds, 2)} seconds"
+    elif seconds < 3600:
+        return f"{round(seconds / 60, 2)} minutes"
+    elif seconds < 86400:
+        return f"{round(seconds / 3600, 2)} hours"
+    elif seconds < 31536000:
+        return f"{round(seconds / 86400, 2)} days"
+    else:
+        return f"{round(seconds / 31536000, 2)} years"
+
+# Example run
+pwd = "Hardened_Pass!26"
+bits = calculate_entropy(pwd)
+print(f"Password: {pwd} -> Entropy: {bits} bits | Cracking Time: {estimate_crack_time(bits)}")
+</code></pre>
+
+                <h2>Interpreting Entropy Scores</h2>
+                <p>We classify credentials based on their active bit strength to determine system safety:</p>
+                <ul>
+                    <li><strong style="color: var(--accent-red);">&lt; 28 bits:</strong> Very Weak. Vulnerable to instant brute-force.</li>
+                    <li><strong style="color: #FFA500;">28 - 35 bits:</strong> Weak. Crackable in minutes.</li>
+                    <li><strong style="color: #FFFF00;">36 - 59 bits:</strong> Medium. Reasonable security for low-value systems.</li>
+                    <li><strong style="color: var(--accent-green);">60 - 127 bits:</strong> Strong. Safe from modern offline GPU cracking rigs.</li>
+                    <li><strong style="color: var(--accent-cyan);">&gt; 127 bits:</strong> Overkill / Cryptographically Secure.</li>
+                </ul>
+
+                <h2>Beyond Pure Math: Dictionary Attacks</h2>
+                <p>Pure Shannon Entropy assumes characters are chosen uniformly at random. In practice, users select common phrases or dictionary words. Therefore, a production password analyzer must combine dynamic entropy evaluation with a <span class="blog-highlight">Trie-based dictionary matcher</span> to catch predictable patterns (e.g., <code>"P@ssword123"</code> which mathematically scores high but is vulnerable to dictionary mapping). This is the exact approach implemented in our flagship Password Strength Analyzer.</p>
+            </div>
+        </article>
+    </main>
+
+</body>
+</html>

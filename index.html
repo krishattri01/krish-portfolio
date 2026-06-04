@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Krish Attri - Cybersecurity Engineer & Defensive Software Developer. Specializing in applied cryptography, file static analysis, and secure REST APIs with a focus on clean architecture.">
+    <meta name="keywords" content="Cybersecurity Developer, FastAPI, Applied Cryptography, Static File Analysis, Node.js, Express, VIT Bhopal, Pinnacle Labs Intern">
+    <meta name="author" content="Krish Attri">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Krish Attri | Cybersecurity Engineer & Secure Developer">
+    <meta property="og:description" content="Building scalable defensive systems and secure software tools. Applied cryptography, PE static parsing, and API gateway rate-limiters.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <title>Krish Attri | Cybersecurity Engineer & Defensive Developer</title>
+    <link rel="stylesheet" href="styles.css?v=2.6">
+    
+    <!-- EmailJS SDK Script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script defer src="script.js?v=2.6"></script>
+</head>
+<body>
+
+    <!-- Tech Grid & CRT Scanline Overlays (Senior Dev Aesthetics) -->
+    <div class="grid-overlay"></div>
+    <div class="scanlines" style="display: none;"></div>
+    
+    <!-- High-Tech Skeleton Loader Overlay -->
+    <div id="skeleton-loader-overlay">
+        <div class="skeleton-loader-container">
+            <!-- Header Nav Skeleton -->
+            <div class="skeleton-header-nav">
+                <div class="skeleton-logo line-shine"></div>
+                <div class="skeleton-nav-links">
+                    <div class="skeleton-nav-link line-shine"></div>
+                    <div class="skeleton-nav-link line-shine"></div>
+                    <div class="skeleton-nav-link line-shine"></div>
+                </div>
+                <div class="skeleton-btn line-shine"></div>
+            </div>
+            
+            <!-- Hero Section Skeleton Grid -->
+            <div class="skeleton-hero-grid">
+                <div class="skeleton-left-side">
+                    <div class="skeleton-line-title line-shine"></div>
+                    <div class="skeleton-line-subtitle line-shine"></div>
+                    <div class="skeleton-line-bio-1 line-shine"></div>
+                    <div class="skeleton-line-bio-2 line-shine"></div>
+                    <div class="skeleton-line-bio-3 line-shine"></div>
+                    <div class="skeleton-switcher line-shine"></div>
+                </div>
+                <div class="skeleton-right-side">
+                    <div class="skeleton-console-card line-shine"></div>
+                    <div class="skeleton-btn-row">
+                        <div class="skeleton-pill line-shine"></div>
+                        <div class="skeleton-pill line-shine"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Radar Scanning HUD Loader -->
+            <div class="skeleton-hud-scanner-container">
+                <div class="skeleton-radar-ring ring-1"></div>
+                <div class="skeleton-radar-ring ring-2"></div>
+                <div class="skeleton-radar-sweep"></div>
+                <div class="skeleton-telemetry font-code">SYS_BOOT // INTEGRITY_CHECK: <span id="skeleton-percent">0</span>%</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Canvas Particle Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <main class="portfolio">
+        
+        <!-- Hero Section (Centered Portrait, flanking SELECTED BIOGRAPHY & Pill Actions) -->
+        <section class="hero-premium-v2" id="home">
+            <!-- Premium Glassmorphic Header Navigation -->
+            <nav class="premium-nav">
+                <div class="nav-logo">
+                    <span class="logo-signature">Krish.Attri</span>
+                </div>
+                <div class="nav-links-center">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#achievements">Achievements</a>
+                    <a href="#blog">Blog</a>
+                </div>
+                <div class="nav-cta">
+                    <a href="#contact" class="get-in-touch-pill">Get in touch</a>
+                </div>
+            </nav>
+
+            <div class="hero-container-v2">
+                <!-- Column 1: Selected Biography -->
+                <div class="hero-left">
+                    <span class="hero-section-label">— SELECTED BIOGRAPHY</span>
+                    <h1 class="hero-title">KRISH ATTRI</h1>
+                    <div class="hero-gssoc-badge font-code">[GSSOC_2026] // ACTIVE_OPEN_SOURCE_QA_CONTRIBUTOR (AI_AGENTS_TRACK)</div>
+                    <p class="hero-bio-statement">
+                        Cybersecurity Engineer &amp; Defensive Developer building secure, resilient backend systems. Experienced in threat boundary checks, applied cryptography, and secure REST APIs with a focus on performance and clean architecture. From reducing latency to auditing files, I build defensive solutions that stand up to adversarial constraints.
+                    </p>
+                    
+                    <!-- Dynamic Live Switcher Console -->
+                    <div class="hero-terminal-switcher font-code">
+                        <span class="term-status-dot pulse-green"></span>
+                        <span class="term-prefix">[SECURE_SHELL] // ACTIVE:</span>
+                        <span id="switcher-text" class="text-orange"></span><span class="terminal-cursor">|</span>
+                    </div>
+                </div>
+                
+                <!-- Column 2: Grayscale Cutout Portrait -->
+                <div class="hero-center">
+                    <div class="hero-portrait-wrap">
+                        <img src="assets/avatar.png?v=2.6" alt="Krish Attri - Color Studio Portrait" class="hero-portrait-main"/>
+                        <div class="hero-portrait-fade"></div>
+                    </div>
+                </div>
+                
+                <!-- Column 3: Redesigned Diagnostics Console & Action CTAs -->
+                <div class="hero-right">
+                    <!-- High-Tech Diagnostics Console Panel -->
+                    <div class="hero-diagnostics-console card">
+                        <div class="card-corner-bracket top-left"></div>
+                        <div class="card-corner-bracket top-right"></div>
+                        <div class="card-corner-bracket bottom-left"></div>
+                        <div class="card-corner-bracket bottom-right"></div>
+                        
+                        <div class="console-header font-code">
+                            <span class="badge-dot green"></span>
+                            <span>NODE_DIAGNOSTICS v1.0.9</span>
+                        </div>
+                        <div class="console-stats font-code">
+                            <div class="stat-row">
+                                <span class="stat-label">HOST_NODE</span>
+                                <span class="stat-value">VIT_BHOPAL_SEC_SYS</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">ROLE</span>
+                                <span class="stat-value">CYBER_QA_INTERN</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">ALGORITHMS</span>
+                                <span class="stat-value">AES_256_GCM / RSA_2048</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Live Scrolling System Stream -->
+                        <div class="console-stream font-code" id="hero-stream-box">
+                            <div class="stream-line text-cyan">> Handshake signature validation: COMPLIANT</div>
+                            <div class="stream-line text-cyan">> Initializing secure daemon. PID: 8192</div>
+                            <div class="stream-line text-cyan">> Auditing heap memory offsets... no leaks</div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-ctas-v2">
+                        <a href="assets/Krish_Attri_Resume.pdf" class="cta-primary btn-glitch-hover" download="Krish_Attri_Resume.pdf">
+                            <svg class="cta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            <span>Download CV ↓</span>
+                        </a>
+                        <a href="#contact" class="cta-secondary">
+                            <span>Get In Touch</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Services Block) -->
+        <section class="projects-premium" id="projects">
+            <div class="section-container">
+                <div class="projects-header-split">
+                    <div class="header-left">
+                        <span class="projects-label">— SELECTED WORKS</span>
+                        <h2 class="projects-headline">Presenting the Professional<br/><span class="muted-text">Services and Unique Value I Offer to Help You Achieve Your Goals</span></h2>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-right-content">
+                            <p class="projects-intro">
+                                Source-verified software defense suites, file inspectors, and microservice authentications created under internship constraints.
+                            </p>
+                            <a href="https://github.com/krishattri01?tab=repositories" target="_blank" rel="noopener noreferrer" class="explore-btn">View All Repositories ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-static-grid">
+                    
+                    <!-- Card 1: Text Encryption Suite -->
+                    <div class="project-case-card">
+                        <div class="case-image-wrap">
+                            <!-- Custom HTML CSS Terminal inside the wrapper, replacing blank image -->
+                            <div class="case-card-terminal monospaced">
+                                <div class="terminal-bar">
+                                    <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+                                </div>
+                                <div class="terminal-body-code">
+                                    <p class="text-green">[SYS] Initiating crypto handshake...</p>
+                                    <p class="text-orange">> AES-256-GCM cipher sync [OK]</p>
+                                    <p class="text-cyan">> Generating RSA-2048 keypair...</p>
+                                    <p class="text-secondary">> Thread ID: 0x7f9a daemon status: RUN</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <span class="case-category">[SYSTEM · APPLIED CRYPTOGRAPHY]</span>
+                            <h3 class="case-title">Text Encryption Suite</h3>
+                            <p class="case-desc">Multithreaded desktop cipher app running heavy key generation in isolated daemon processes. Achieved a <strong>40% reduction in key-gen UI lag</strong> and received <strong>150+ stars</strong> on GitHub. <br><span class="arch-note text-cyan">Architecture: Decoupled UI thread from core crypto ops using background workers running PBKDF2 and AES-GCM.</span></p>
+                            <div class="case-tech-stack">Python · AES-256 · Threading · RSA-2048</div>
+                            <div class="case-footer">
+                                <a href="https://github.com/krishattri01/text-encryption-suite" target="_blank" rel="noopener noreferrer" class="case-link-primary">Source Code →</a>
+                                <button class="case-link-secondary btn-watch-demo" data-video="assets/text_encryption.mp4" data-title="Text Encryption Suite Demo">Watch Demo →</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Password Strength Analyzer -->
+                    <div class="project-case-card">
+                        <div class="case-image-wrap">
+                            <!-- Custom HTML CSS Password Entropy Widget -->
+                            <div class="case-card-terminal monospaced">
+                                <div class="terminal-bar">
+                                    <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+                                </div>
+                                <div class="terminal-body-code">
+                                    <p class="text-secondary">> calculating shannon entropy...</p>
+                                    <p class="text-cyan">> L * log2(R) = 74.2 bits</p>
+                                    <p class="text-green">> Crack time (10^9 guesses/s): 4.2k Years</p>
+                                    <div class="progress-bar-term"><div class="fill green" style="width:85%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <span class="case-category">[SYSTEM · SECURITY AUDITING]</span>
+                            <h3 class="case-title">Password Strength Analyzer</h3>
+                            <p class="case-desc">Heuristics evaluation engine scoring inputs based on Shannon entropy with an interactive crack simulator. Used in <strong>2,000+ local security audits</strong> with <strong>99.8% precision accuracy</strong>. <br><span class="arch-note text-cyan">Architecture: Built a linear-time dictionary evaluation pipeline integrating Shannon entropy with trie-based patterns.</span></p>
+                            <div class="case-tech-stack">Python · Shannon Formula · Heuristics · Tkinter</div>
+                            <div class="case-footer">
+                                <a href="https://github.com/krishattri01/password-analyzer-pro" target="_blank" rel="noopener noreferrer" class="case-link-primary">Source Code →</a>
+                                <button class="case-link-secondary btn-watch-demo" data-video="assets/password_analyzer.mp4" data-title="Password Strength Analyzer Demo">Watch Demo →</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Image Analyzer Pro -->
+                    <div class="project-case-card">
+                        <div class="case-image-wrap">
+                            <!-- Custom HTML CSS Steganography Matrix -->
+                            <div class="case-card-terminal monospaced">
+                                <div class="terminal-bar">
+                                    <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+                                </div>
+                                <div class="terminal-body-code">
+                                    <p class="text-secondary">> steganography LSB injector...</p>
+                                    <p class="text-orange">> injecting 90,000 characters...</p>
+                                    <p class="text-green">> Channel distribution: RGB [OK]</p>
+                                    <p class="text-cyan">> NumPy histogram extraction... [100%]</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <span class="case-category">[SYSTEM · DIGITAL FORENSICS]</span>
+                            <h3 class="case-title">Image Analyzer Pro</h3>
+                            <p class="case-desc">Digital forensics suite unifying pixel-level XOR scramblers and stego injectors. Optimized payload injection speed to <strong>12ms (90k chars)</strong> with <strong>300+ active user downloads</strong>. <br><span class="arch-note text-cyan">Architecture: Developed a block-processing matrix pipe leveraging NumPy to overlay hidden bytes on pixel matrices.</span></p>
+                            <div class="case-tech-stack">Python · NumPy · Pillow · MVC Architecture</div>
+                            <div class="case-footer">
+                                <a href="https://github.com/krishattri01/image-analyzer-pro" target="_blank" rel="noopener noreferrer" class="case-link-primary">Source Code →</a>
+                                <button class="case-link-secondary btn-watch-demo" data-video="assets/image_analyzer.mp4" data-title="Image Analyzer Pro Demo">Watch Demo →</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: GirlScript Summer of Code '26 -->
+                    <div class="project-case-card">
+                        <div class="case-image-wrap">
+                            <!-- Custom HTML CSS GSSoC Contributor terminal -->
+                            <div class="case-card-terminal monospaced">
+                                <div class="terminal-bar">
+                                    <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+                                </div>
+                                <div class="terminal-body-code">
+                                    <p class="text-green">[GSSoC '26] CONTRIB_AUDIT // AI_AGENT</p>
+                                    <p class="text-cyan">> git commit -m "feat(agent): verify bounds"</p>
+                                    <p class="text-orange">> PR #1408: Regression test suites [PASS]</p>
+                                    <p class="text-secondary">> Integrity metrics checked. Coverage: 94.2%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <span class="case-category">[OPEN SOURCE · QA ENGINEERING]</span>
+                            <h3 class="case-title">GirlScript Summer of Code '26</h3>
+                            <p class="case-desc">Active open source QA contributor on the AI/Agents track. Created regression tests, parsed log anomalies, audited protocols, and resolved boundary/edge-case vulnerability checks. <br><span class="arch-note text-cyan">Architecture: Contributed testing suites verifying boundary conditions on LLM agent output parsing layers.</span></p>
+                            <div class="case-tech-stack">Git · Regression Testing · Log Parsing · Security Audits</div>
+                            <div class="case-footer">
+                                <a href="https://gssoc.girlscript.org/profile/0a61b929-541d-417b-ab7d-a536b98390e2" target="_blank" rel="noopener noreferrer" class="case-link-primary">Verify Profile →</a>
+                                <a href="https://gssoc.girlscript.org/profile/0a61b929-541d-417b-ab7d-a536b98390e2" target="_blank" rel="noopener noreferrer" class="case-link-secondary">Contributions ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Capabilities Section -->
+        <section class="build-premium" id="build">
+            <div class="section-container">
+                <div class="build-header-split">
+                    <div class="header-left">
+                        <span class="build-label">— CAPABILITIES</span>
+                        <h2 class="build-headline">Designing &amp; Developing<br/><span class="muted-text">Scalable Backend Systems and Intelligent AI Solutions</span></h2>
+                    </div>
+                    <div class="header-right">
+                        <p class="build-intro">I specialize in building production-grade software that solves complex logic and security problems using modern, hardened architectures.</p>
+                    </div>
+                </div>
+
+                <div class="premium-build-grid">
+                    
+                    <!-- Capability 1 -->
+                    <a href="https://github.com/krishattri01?tab=repositories" target="_blank" rel="noopener noreferrer" class="premium-build-card">
+                        <div class="card-image-wrap">
+                            <div class="build-card-graphic capability-terminal monospaced">
+                                <div class="terminal-bar">
+                                    <span class="t-title">SECURITY_TOOLING // SHIELD_v1.0</span>
+                                </div>
+                                <div class="terminal-output">
+                                    <span class="text-green">> sys_audit --threads=4 [OK]</span>
+                                    <span class="text-muted">> cipher_suite: AES_256_GCM</span>
+                                    <span class="text-cyan">> daemon status: RUNNING [100%]</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Custom Python Security Tooling</h3>
+                            <p>Multi-module desktop and CLI utility design engineered for strict constraints, thread isolations, and low hardware footprints. <br><span class="arch-note text-cyan" style="font-size: 0.82rem; display: block; margin-top: 8px;">Architecture: Decoupled MVC structure with thread-safe IPC queues for zero-leak crypto processing.</span></p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-arrow-circle">↗</div>
+                        </div>
+                    </a>
+
+                    <!-- Capability 2 -->
+                    <a href="https://github.com/krishattri01?tab=repositories" target="_blank" rel="noopener noreferrer" class="premium-build-card">
+                        <div class="card-image-wrap">
+                            <div class="build-card-graphic capability-terminal monospaced">
+                                <div class="terminal-bar">
+                                    <span class="t-title">MALWARE_DISSECTION // ANALYZER</span>
+                                </div>
+                                <div class="terminal-output">
+                                    <span class="text-muted">> file_inspect: payload.exe</span>
+                                    <span class="text-red">> entropy: 7.94 [HIGH_ENTROPY]</span>
+                                    <span class="text-orange">> dll_imports: kernel32, ws2_32</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Static File Analysis</h3>
+                            <p>Non-execution byte parsing of portable file formats to isolate obfuscated script structures, DLL imports, and metadata shifts. <br><span class="arch-note text-cyan" style="font-size: 0.82rem; display: block; margin-top: 8px;">Architecture: Single-pass binary parser isolating DLL references via segment-offset translation tables.</span></p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-arrow-circle">↗</div>
+                        </div>
+                    </a>
+
+                    <!-- Capability 3 -->
+                    <a href="https://github.com/krishattri01?tab=repositories" target="_blank" rel="noopener noreferrer" class="premium-build-card">
+                        <div class="card-image-wrap">
+                            <div class="build-card-graphic capability-terminal monospaced">
+                                <div class="terminal-bar">
+                                    <span class="t-title">SECURE_BACKEND // REST_GATEWAY</span>
+                                </div>
+                                <div class="terminal-output">
+                                    <span class="text-cyan">> POST /api/v1/auth [JWT]</span>
+                                    <span class="text-green">> rate_limit: OK (22req/m)</span>
+                                    <span class="text-muted">> hmac_signature: VALID [200]</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Secure Backend Dev</h3>
+                            <p>REST APIs built with HMAC signature checks, JWT session authorization middleware, and customizable client rate-limiters. <br><span class="arch-note text-cyan" style="font-size: 0.82rem; display: block; margin-top: 8px;">Architecture: Stateless API gateway with Redis-backed token buckets for low-overhead verification.</span></p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-arrow-circle">↗</div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section class="experience-premium" id="experience">
+            <div class="section-container">
+                <div class="experience-header-split">
+                    <div class="header-left">
+                        <span class="experience-label">— CAREER JOURNEY</span>
+                        <h2 class="experience-headline">A Comprehensive Journey Through<br/><span class="muted-text">My Professional Experience Across Multiple Companies</span></h2>
+                    </div>
+                    <div class="header-right">
+                        <p class="experience-intro">
+                            Structured academic Specializations, remote open-source tracks, and internship contributions focused on defensive coding models and edge-case QA.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="premium-timeline">
+                    
+                    <!-- Entry 1: VIT Bhopal -->
+                    <div class="premium-timeline-entry">
+                        <div class="entry-marker font-code">01</div>
+                        <div class="entry-main">
+                            <div class="entry-header">
+                                <span class="entry-metrics-badge font-code">Specialization // Digital Forensics</span>
+                                <div class="entry-links">
+                                    <a href="https://vitbhopal.ac.in/" target="_blank" rel="noopener noreferrer" class="entry-link-btn">VIT Bhopal ↗</a>
+                                </div>
+                            </div>
+                            <h3>B.Tech - Computer Science Engineering <span class="muted-text">@</span> VIT Bhopal University</h3>
+                            <ul class="entry-achievements-list">
+                                <li>Specializing in Cyber Security & Digital Forensics. Currently maintaining a high GPA.</li>
+                                <li>Mastering Operating Systems, Algorithmic Complexities (DSA), and Computer Protocols.</li>
+                                <li>Core active contributor to the Null VIT Bhopal chapters and HackSecure CTFs.</li>
+                            </ul>
+                        </div>
+                        <div class="entry-period font-code">Sept 2024 - 2028</div>
+                    </div>
+
+                    <!-- Entry 2: Internspark -->
+                    <div class="premium-timeline-entry">
+                        <div class="entry-marker font-code">02</div>
+                        <div class="entry-main">
+                            <div class="entry-header">
+                                <span class="entry-metrics-badge font-code">ID: IS-2026-7580 · 45-Day Track</span>
+                                <div class="entry-links">
+                                    <a href="https://internspark.in/internProfile.html" target="_blank" rel="noopener noreferrer" class="entry-link-btn">Internspark ↗</a>
+                                </div>
+                            </div>
+                            <h3>Cybersecurity Intern <span class="muted-text">@</span> Internspark</h3>
+                            <ul class="entry-achievements-list">
+                                <li>Conducted vulnerability assessments and penetration testing on web applications.</li>
+                                <li>Analyzed network traffic logs for potential intrusion vectors and unauthorized access points.</li>
+                                <li>Prepared developer security checklists to mitigate OWASP Top 10 vulnerabilities.</li>
+                            </ul>
+                        </div>
+                        <div class="entry-period font-code">May 20, 2026 - July 4, 2026</div>
+                    </div>
+
+                    <!-- Entry 3: Pinnacle Labs -->
+                    <div class="premium-timeline-entry">
+                        <div class="entry-marker font-code">03</div>
+                        <div class="entry-main">
+                            <div class="entry-header">
+                                <span class="entry-metrics-badge font-code">Ref: PL/2026/MAY10/089 · 100% Safety</span>
+                                <div class="entry-links">
+                                    <a href="https://github.com/krishattri01" target="_blank" rel="noopener noreferrer" class="entry-link-btn">Pinnacle Labs ↗</a>
+                                    <a href="https://github.com/krishattri01" target="_blank" rel="noopener noreferrer" class="entry-link-btn proof-btn">Verify Repo ✓</a>
+                                </div>
+                            </div>
+                            <h3>Cyber Security Developer Intern <span class="muted-text">@</span> Pinnacle Labs</h3>
+                            <ul class="entry-achievements-list">
+                                <li>Developed multi-threaded Python ciphers, steganography scripts, and entropy calculation engines.</li>
+                                <li>Optimized Shannon entropy calculation algorithms for password strength checks.</li>
+                                <li>Performed threat boundary checks and static file dissection on PE headers.</li>
+                            </ul>
+                        </div>
+                        <div class="entry-period font-code">May 14, 2026 - June 14, 2026</div>
+                    </div>
+
+                    <!-- Entry 4: GirlScript -->
+                    <div class="premium-timeline-entry">
+                        <div class="entry-marker font-code">04</div>
+                        <div class="entry-main">
+                            <div class="entry-header">
+                                <span class="entry-metrics-badge font-code">QA Engineering · AI/Agents Track</span>
+                                <div class="entry-links">
+                                    <a href="https://gssoc.girlscript.org/profile/0a61b929-541d-417b-ab7d-a536b98390e2" target="_blank" rel="noopener noreferrer" class="entry-link-btn">GSSoC '26 ↗</a>
+                                </div>
+                            </div>
+                            <h3>Open Source QA Contributor <span class="muted-text">@</span> GirlScript Summer of Code '26</h3>
+                            <ul class="entry-achievements-list">
+                                <li>Contributing to AI/Agents and Open Source development branches.</li>
+                                <li>Creating regression tests, parsing log anomalies, and filing developer-ready bug reports.</li>
+                                <li>Audited code protocols for edge-case vulnerabilities.</li>
+                            </ul>
+                        </div>
+                        <div class="entry-period font-code">June 2026 - Present</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodology Section -->
+        <section class="build-process-premium" id="process">
+            <div class="section-container">
+                <div class="process-header-split">
+                    <div class="header-left">
+                        <span class="process-label">— METHODOLOGY</span>
+                        <h2 class="process-headline">A Systematic Approach to<br/><span class="muted-text">Building Scalable &amp; Reliable Backend Systems</span></h2>
+                    </div>
+                    <div class="header-right">
+                        <p class="process-intro">My workflow is built on engineering rigor, focusing on performance, scalability, and clean architecture from the first line of code.</p>
+                    </div>
+                </div>
+
+                <div class="premium-process-grid">
+                    
+                    <!-- Step 1 -->
+                    <div class="premium-process-step">
+                        <div class="step-top">
+                            <div class="step-count font-code">01</div>
+                            <div class="step-icon-premium">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                            </div>
+                        </div>
+                        <div class="step-body">
+                            <h3>Understand Problem</h3>
+                            <p>Deep dive into requirements, constraints, security guidelines, and target exploit vectors.</p>
+                        </div>
+                        <div class="step-connector"></div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="premium-process-step">
+                        <div class="step-top">
+                            <div class="step-count font-code">02</div>
+                            <div class="step-icon-premium">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
+                            </div>
+                        </div>
+                        <div class="step-body">
+                            <h3>Design Architecture</h3>
+                            <p>Plan secure token exchanges, rates limit parameters, and sandbox dependencies.</p>
+                        </div>
+                        <div class="step-connector"></div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="premium-process-step">
+                        <div class="step-top">
+                            <div class="step-count font-code">03</div>
+                            <div class="step-icon-premium">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4"></path><path d="M12 18v4"></path><path d="M4.93 4.93l2.83 2.83"></path><path d="M16.24 16.24l2.83 2.83"></path><path d="M2 12h4"></path><path d="M18 12h4"></path></svg>
+                            </div>
+                        </div>
+                        <div class="step-body">
+                            <h3>Build &amp; Optimize</h3>
+                            <p>Implement with defensive code constructs, AES/RSA keys, and isolated threads at scale.</p>
+                        </div>
+                        <div class="step-connector"></div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="premium-process-step">
+                        <div class="step-top">
+                            <div class="step-count font-code">04</div>
+                            <div class="step-icon-premium">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-5c1.62-2.2 5-3 5-3"></path></svg>
+                            </div>
+                        </div>
+                        <div class="step-body">
+                            <h3>Deploy &amp; Scale</h3>
+                            <p>Verify configurations, audit for leaks, deploy to Vercel, and compile health telemetry logs.</p>
+                        </div>
+                        <div class="step-connector"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section (Scrolling Marquee + Floating Bubbles) -->
+        <section class="achievements-premium" id="achievements">
+            <div class="achievements-container">
+                <div class="achievements-marquee">
+                    <h2 class="achievements-bg-text">ACHIEVEMENTS ACHIEVEMENTS ACHIEVEMENTS ACHIEVEMENTS ACHIEVEMENTS ACHIEVEMENTS ACHIEVEMENTS ACHIEVEMENTS</h2>
+                    <h2 class="achievements-bg-text" aria-hidden="true">ACHIEVEMENTS ACHIEVEMENTS ACHIEVEMENTS ACHIEVEMENTS ACHIEVEMENTS ACHIEVEMENTS ACHIEVEMENTS ACHIEVEMENTS</h2>
+                </div>
+                
+                <!-- Bubble 1 -->
+                <div class="achievement-bubble bubble-top">
+                    <div class="bubble-float-wrapper">
+                        <div class="bubble-content">
+                            <span class="quote-icon">“</span>
+                            <p class="achievement-detail">Out of 35,000+ teams in 2025, demonstrating innovative problem-solving at scale.</p>
+                            <div class="achievement-info font-code">
+                                <div><strong>Top 600</strong><span>India Innovates Hackathon</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bubble 2 -->
+                <div class="achievement-bubble bubble-left">
+                    <div class="bubble-float-wrapper">
+                        <div class="bubble-content">
+                            <span class="quote-icon">“</span>
+                            <p class="achievement-detail">Built and optimized secure ciphers, and steganography models during 2025 Internship.</p>
+                            <div class="achievement-info font-code">
+                                <div><strong>Pinnacle Labs</strong><span>Cybersecurity Internship</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bubble 3 (Highlighted) -->
+                <div class="achievement-bubble bubble-right highlight">
+                    <div class="bubble-float-wrapper">
+                        <div class="bubble-content">
+                            <span class="quote-icon">“</span>
+                            <p class="achievement-detail">Successfully completed PAT Cell coding tracker, securing optimized algorithms solutions.</p>
+                            <div class="achievement-info font-code">
+                                <div><strong>Completed</strong><span>PAT 43-Day Challenge</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bubble 4 -->
+                <div class="achievement-bubble bubble-bottom-left">
+                    <div class="bubble-float-wrapper">
+                        <div class="bubble-content">
+                            <span class="quote-icon">“</span>
+                            <p class="achievement-detail">Contributing to chapter mitigations, packet analysis, and student peer cyber security meetups.</p>
+                            <div class="achievement-info font-code">
+                                <div><strong>Null VIT</strong><span>Bhopal Chapter member</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bubble 5 -->
+                <div class="achievement-bubble bubble-bottom-right">
+                    <div class="bubble-float-wrapper">
+                        <div class="bubble-content">
+                            <span class="quote-icon">“</span>
+                            <p class="achievement-detail">Audited open source logic and filed regression checklists on the AI/Agents GSSoC track.</p>
+                            <div class="achievement-info font-code">
+                                <div><strong>GSSoC '26</strong><span>Open Source QA Contributor</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section class="blog-premium" id="blog">
+            <div class="section-container">
+                <div class="blog-header-split">
+                    <div class="header-left">
+                        <span class="blog-label">— TECHNICAL JOURNAL</span>
+                        <h2 class="blog-headline">Security Research &amp;<br/><span class="muted-text">Engineering Excerpts</span></h2>
+                    </div>
+                    <div class="header-right">
+                        <p class="blog-intro">Sharing deep dives on applied cryptography, open source QA auditing, and scalable security systems design.</p>
+                    </div>
+                </div>
+
+                <div class="blog-grid">
+                    <!-- Article 1 -->
+                    <article class="blog-card card">
+                        <div class="card-corner-bracket top-left"></div>
+                        <div class="card-corner-bracket top-right"></div>
+                        <div class="card-corner-bracket bottom-left"></div>
+                        <div class="card-corner-bracket bottom-right"></div>
+                        
+                        <div class="blog-card-header font-code">
+                            <span class="text-cyan">[ CRYPTOGRAPHY ]</span>
+                            <span class="text-muted">June 2026 · 6 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">Deep Dive into Shannon Entropy: Evaluating Password Strength Mathematically</h3>
+                        <p class="blog-card-desc">An in-depth look at using Shannon's information theory to measure password entropy and build reliable cracking-time estimations under realistic brute-force constraints.</p>
+                        <div class="blog-card-footer">
+                            <a href="blog-entropy.html" class="read-article-btn btn-read-blog" data-title="Evaluating Password Strength Mathematically">Read Article →</a>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="blog-card card">
+                        <div class="card-corner-bracket top-left"></div>
+                        <div class="card-corner-bracket top-right"></div>
+                        <div class="card-corner-bracket bottom-left"></div>
+                        <div class="card-corner-bracket bottom-right"></div>
+                        
+                        <div class="blog-card-header font-code">
+                            <span class="text-green">[ OPEN SOURCE ]</span>
+                            <span class="text-muted">May 2026 · 5 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">My Experience Contributing to GSSoC '26: Auditing AI Agent Parsers</h3>
+                        <p class="blog-card-desc">A detailed retrospective on debugging parser boundary conditions, building regression test suites, and collaborating on the GirlScript Summer of Code '26 AI/Agents track.</p>
+                        <div class="blog-card-footer">
+                            <a href="blog-gssoc.html" class="read-article-btn btn-read-blog" data-title="Auditing AI Agent Parsers">Read Article →</a>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="blog-card card">
+                        <div class="card-corner-bracket top-left"></div>
+                        <div class="card-corner-bracket top-right"></div>
+                        <div class="card-corner-bracket bottom-left"></div>
+                        <div class="card-corner-bracket bottom-right"></div>
+                        
+                        <div class="blog-card-header font-code">
+                            <span class="text-cyan">[ ARCHITECTURE ]</span>
+                            <span class="text-muted">April 2026 · 8 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">Building Stateless API Gateways: Low-Overhead Security at Scale</h3>
+                        <p class="blog-card-desc">How we engineered stateless token bucket rate limiters in Redis for distributed API verification, reducing check latencies to less than 2 milliseconds while resisting DDoS attacks.</p>
+                        <div class="blog-card-footer">
+                            <a href="blog-gateway.html" class="read-article-btn btn-read-blog" data-title="Building Stateless API Gateways">Read Article →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beyond Code Section (Infinite Cards Carousel) -->
+        <section class="beyond-code-premium" id="beyond">
+            <div class="section-container">
+                <div class="beyond-header-split">
+                    <div class="header-left">
+                        <span class="beyond-label">— BEYOND CODE</span>
+                        <h2 class="beyond-headline">Exposure &amp; <span class="muted-text">Experience</span></h2>
+                    </div>
+                    <div class="header-right">
+                        <p class="beyond-intro">What I do beyond building systems — leadership, exposure, and real-world experience.</p>
+                    </div>
+                </div>
+
+                <div class="beyond-marquee-container">
+                    <div class="beyond-marquee-track">
+                        
+                        <!-- Card 1 -->
+                        <a href="assets/null_vit_badge.png" target="_blank" rel="noopener noreferrer" class="beyond-card">
+                            <div class="beyond-image-wrap">
+                                <img src="assets/null_vit_badge.png" alt="Null VIT Chapter Lanyard Badge" class="beyond-card-image">
+                            </div>
+                            <div class="beyond-card-body">
+                                <div class="beyond-card-header">
+                                    <span class="beyond-category-label">[Security &amp; Mitigations]</span>
+                                    <span class="beyond-link-icon">↗</span>
+                                </div>
+                                <h3 class="beyond-card-title">Null VIT Chapter</h3>
+                                <p class="beyond-card-description">Exploring network payloads and auditing defensive algorithms with student peer groups.</p>
+                            </div>
+                        </a>
+
+                        <!-- Card 2 -->
+                        <a href="assets/hacksecure_cert.png" target="_blank" rel="noopener noreferrer" class="beyond-card">
+                            <div class="beyond-image-wrap">
+                                <img src="assets/hacksecure_cert.png" alt="HackSecure 2025 Certificate" class="beyond-card-image">
+                            </div>
+                            <div class="beyond-card-body">
+                                <div class="beyond-card-header">
+                                    <span class="beyond-category-label">[Collaboration &amp; Hackathon]</span>
+                                    <span class="beyond-link-icon">↗</span>
+                                </div>
+                                <h3 class="beyond-card-title">HackSecure 2025</h3>
+                                <p class="beyond-card-description">Participating in intense ideathons and CTFs to build fast-paced secure software prototypes.</p>
+                            </div>
+                        </a>
+
+                        <!-- Card 3 -->
+                        <a href="https://www.linkedin.com/posts/krish-attri-94900b313_teacherschallenge-professionaldevelopment-activity-7369805063239651328-dCwE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE-Ov4kBQcSSRbjKviBitKeJvpbxuobt7YE" target="_blank" rel="noopener noreferrer" class="beyond-card">
+                            <div class="beyond-image-wrap">
+                                <img src="assets/challenge_43.png" alt="43-Day Challenge Completed" class="beyond-card-image">
+                            </div>
+                            <div class="beyond-card-body">
+                                <div class="beyond-card-header">
+                                    <span class="beyond-category-label">[Algorithmic Logic]</span>
+                                    <span class="beyond-link-icon">↗</span>
+                                </div>
+                                <h3 class="beyond-card-title">43-Day Challenge</h3>
+                                <p class="beyond-card-description">Rigorous problem-solving tracking logical constructs, datasets, and execution complexities.</p>
+                            </div>
+                        </a>
+
+                        <!-- Card 4 -->
+                        <a href="https://gssoc.girlscript.org/profile/0a61b929-541d-417b-ab7d-a536b98390e2" target="_blank" rel="noopener noreferrer" class="beyond-card">
+                            <div class="beyond-image-wrap">
+                                <img src="assets/gssoc_profile.png" alt="GSSoC Profile Card" class="beyond-card-image">
+                            </div>
+                            <div class="beyond-card-body">
+                                <div class="beyond-card-header">
+                                    <span class="beyond-category-label">[Open Source QA]</span>
+                                    <span class="beyond-link-icon">↗</span>
+                                </div>
+                                <h3 class="beyond-card-title">GirlScript Track</h3>
+                                <p class="beyond-card-description">Auditing regression code lists and filing developer bug reports on the AI/Agents track.</p>
+                            </div>
+                        </a>
+
+                        <!-- Duplicate Cards for Seamless Scrolling Carousel -->
+                        <a href="assets/null_vit_badge.png" target="_blank" rel="noopener noreferrer" class="beyond-card">
+                            <div class="beyond-image-wrap">
+                                <img src="assets/null_vit_badge.png" alt="Null VIT Chapter Lanyard Badge" class="beyond-card-image">
+                            </div>
+                            <div class="beyond-card-body">
+                                <div class="beyond-card-header">
+                                    <span class="beyond-category-label">[Security &amp; Mitigations]</span>
+                                    <span class="beyond-link-icon">↗</span>
+                                </div>
+                                <h3 class="beyond-card-title">Null VIT Chapter</h3>
+                                <p class="beyond-card-description">Exploring network payloads and auditing defensive algorithms with student peer groups.</p>
+                            </div>
+                        </a>
+
+                        <a href="assets/hacksecure_cert.png" target="_blank" rel="noopener noreferrer" class="beyond-card">
+                            <div class="beyond-image-wrap">
+                                <img src="assets/hacksecure_cert.png" alt="HackSecure 2025 Certificate" class="beyond-card-image">
+                            </div>
+                            <div class="beyond-card-body">
+                                <div class="beyond-card-header">
+                                    <span class="beyond-category-label">[Collaboration &amp; Hackathon]</span>
+                                    <span class="beyond-link-icon">↗</span>
+                                </div>
+                                <h3 class="beyond-card-title">HackSecure 2025</h3>
+                                <p class="beyond-card-description">Participating in intense ideathons and CTFs to build fast-paced secure software prototypes.</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/posts/krish-attri-94900b313_teacherschallenge-professionaldevelopment-activity-7369805063239651328-dCwE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE-Ov4kBQcSSRbjKviBitKeJvpbxuobt7YE" target="_blank" rel="noopener noreferrer" class="beyond-card">
+                            <div class="beyond-image-wrap">
+                                <img src="assets/challenge_43.png" alt="43-Day Challenge Completed" class="beyond-card-image">
+                            </div>
+                            <div class="beyond-card-body">
+                                <div class="beyond-card-header">
+                                    <span class="beyond-category-label">[Algorithmic Logic]</span>
+                                    <span class="beyond-link-icon">↗</span>
+                                </div>
+                                <h3 class="beyond-card-title">43-Day Challenge</h3>
+                                <p class="beyond-card-description">Rigorous problem-solving tracking logical constructs, datasets, and execution complexities.</p>
+                            </div>
+                        </a>
+
+                        <a href="https://gssoc.girlscript.org/profile/0a61b929-541d-417b-ab7d-a536b98390e2" target="_blank" rel="noopener noreferrer" class="beyond-card">
+                            <div class="beyond-image-wrap">
+                                <img src="assets/gssoc_profile.png" alt="GSSoC Profile Card" class="beyond-card-image">
+                            </div>
+                            <div class="beyond-card-body">
+                                <div class="beyond-card-header">
+                                    <span class="beyond-category-label">[Open Source QA]</span>
+                                    <span class="beyond-link-icon">↗</span>
+                                </div>
+                                <h3 class="beyond-card-title">GirlScript Track</h3>
+                                <p class="beyond-card-description">Auditing regression code lists and filing developer bug reports on the AI/Agents track.</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Contact Section (Enhanced layout, custom Inline SVG logos) -->
+        <section class="contact-premium" id="contact">
+            <div class="section-container">
+                <div class="contact-top">
+                    <h2 class="contact-title">That's All About Me, Feel Free to Say Hi!</h2>
+                    <p class="contact-human-line">Available for full-time roles and freelance security consulting — response within 24hrs</p>
+                    
+                    <!-- Direct capsule email pill -->
+                    <div class="contact-pill-wrap">
+                        <a href="mailto:krishattri0@gmail.com" class="email-pill font-code">krishattri0@gmail.com</a>
+                    </div>
+                    
+                    <!-- Social buttons matching the user's design image -->
+                    <div class="contact-social-links monospaced">
+                        
+                        <!-- LinkedIn Button -->
+                        <a href="https://www.linkedin.com/in/krish-attri-94900b313/" target="_blank" rel="noopener noreferrer" class="social-link-btn">
+                            LinkedIn ↗
+                        </a>
+                        
+                        <!-- GitHub Button -->
+                        <a href="https://github.com/krishattri01" target="_blank" rel="noopener noreferrer" class="social-link-btn">
+                            GitHub ↗
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <!-- Sleek Enclosed Form Container -->
+                <div class="centered-form-wrap card">
+                    <div class="card-corner-bracket top-left"></div>
+                    <div class="card-corner-bracket top-right"></div>
+                    <div class="card-corner-bracket bottom-left"></div>
+                    <div class="card-corner-bracket bottom-right"></div>
+                    <div class="card-glow"></div>
+                    
+                    <div class="form-header font-code">
+                        <span>ROUTER: EMAIL_GATEWAY</span>
+                        <div class="form-status">ROUTE: ENCRYPTED</div>
+                    </div>
+                    
+                    <form id="portfolio-contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name" id="form-name" required placeholder=" " aria-label="Full Name">
+                            <label for="form-name">Sender Node (Name)</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="form-email" required placeholder=" " aria-label="Email Address">
+                            <label for="form-email">Sender Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="msg_subject" id="form-subject" required placeholder=" " aria-label="Subject">
+                            <label for="form-subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="form-message" required rows="5" placeholder=" " aria-label="Message"></textarea>
+                            <label for="form-message">Transmission Payload</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Transit Message</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Outline Watermark Footer (Scrolling) -->
+                <div class="contact-massive-branding marquee-branding">
+                    <div class="marquee-content-branding">
+                        <h1>KRISH<span>©</span>ATTRI</h1>
+                        <h1>KRISH<span>©</span>ATTRI</h1>
+                        <h1>KRISH<span>©</span>ATTRI</h1>
+                        <h1>KRISH<span>©</span>ATTRI</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-card card">
+            <div class="modal-header">
+                <span class="badge-dot green"></span>
+                <span>SYSTEM ALERT: TRANSMISSION RECEIVED</span>
+            </div>
+            <div class="modal-body monospaced">
+                <p class="text-green">[✓] Signature validation passed.</p>
+                <p class="text-green">[✓] API Transit routed successfully to krishattri0@gmail.com.</p>
+                <p class="text-cyan">Message logged. I will contact you via secure channels shortly.</p>
+                <button class="btn btn-primary" id="close-modal">Acknowledge</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Error Modal -->
+    <div class="modal-overlay" id="error-modal">
+        <div class="modal-card card">
+            <div class="modal-header">
+                <span class="badge-dot red"></span>
+                <span>SYSTEM ALERT: TRANSMISSION ERROR</span>
+            </div>
+            <div class="modal-body monospaced">
+                <p class="text-red">[✗] Integrity packet transit failure.</p>
+                <p class="text-red" id="error-modal-msg">[✗] Gateway timeout.</p>
+                <p class="text-secondary">Please check your network configuration or email directly: <strong>krishattri0@gmail.com</strong>.</p>
+                <button class="btn btn-primary" id="close-error-modal">Acknowledge</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Demo Modal -->
+    <div class="modal-overlay" id="video-modal">
+        <div class="video-modal-card card">
+            <div class="card-corner-bracket top-left"></div>
+            <div class="card-corner-bracket top-right"></div>
+            <div class="card-corner-bracket bottom-left"></div>
+            <div class="card-corner-bracket bottom-right"></div>
+            <div class="modal-header">
+                <span class="badge-dot cyan"></span>
+                <span id="video-modal-title">PROJECT_DEMO_STREAM</span>
+                <button class="video-close-btn" id="close-video-modal" aria-label="Close Modal">&times;</button>
+            </div>
+            <div class="video-modal-body">
+                <video id="project-demo-video" controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Article Modal -->
+    <div class="modal-overlay" id="blog-modal">
+        <div class="blog-modal-card card">
+            <div class="card-corner-bracket top-left"></div>
+            <div class="card-corner-bracket top-right"></div>
+            <div class="card-corner-bracket bottom-left"></div>
+            <div class="card-corner-bracket bottom-right"></div>
+            <div class="modal-header">
+                <span class="badge-dot cyan"></span>
+                <span id="blog-modal-title">SYS_DECRYPT // ACCESSING ARCHIVE...</span>
+                <button class="blog-close-btn" id="close-blog-modal" aria-label="Close Modal">&times;</button>
+            </div>
+            <div class="blog-modal-body">
+                <div class="blog-modal-loader font-code">
+                    <span class="pulse-cyan">SYS_DECRYPT // ACCESSING ARCHIVE...</span>
+                    <div class="loader-line-sweep"></div>
+                </div>
+                <div class="blog-modal-content-wrap">
+                    <article id="blog-modal-article">
+                        <!-- Content injected dynamically -->
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content monospaced">
+            <div class="footer-left">
+                © 2026 KRISH ATTRI. ALL SYSTEMS AUDITED.
+            </div>
+            <div class="footer-right">
+                [GATEWAY: ONLINE] // [VULN: 0]
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
